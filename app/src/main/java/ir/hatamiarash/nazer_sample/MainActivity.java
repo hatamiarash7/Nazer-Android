@@ -1,4 +1,4 @@
-package ir.hatamiarash.nazer;
+package ir.hatamiarash.nazer_sample;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
