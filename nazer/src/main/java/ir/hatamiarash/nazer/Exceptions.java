@@ -10,10 +10,10 @@ import ir.hatamiarash.nazer.models.ExceptionModel;
 
 import static ir.hatamiarash.nazer.Nazer.getPackageName;
 
-public class Exceptions {
+class Exceptions {
 	private static String TAG = Exceptions.class.getName();
 	
-	public static void report(@NotNull ExceptionModel exception) {
+	static void report(@NotNull ExceptionModel exception) {
 		try {
 			Networking networking = new Networking();
 			
