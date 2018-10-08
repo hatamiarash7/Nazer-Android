@@ -1,2 +1,12 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="ir.hatamiarash.nazer"/>
+<manifest
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	package="ir.hatamiarash.nazer">
+
+	<application>
+		<provider
+			android:name=".providers.NazerInitProvider"
+			android:authorities="${applicationId}.NazerInitProvider"
+			android:exported="false"
+			android:initOrder="101"/>
+	</application>
+</manifest>
