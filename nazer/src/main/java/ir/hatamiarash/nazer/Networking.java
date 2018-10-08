@@ -24,8 +24,8 @@ class Networking {
 	Networking() {
 	}
 	
-	public void sendRequest(final String body) {
-		StringRequest request = new StringRequest(Request.Method.POST, "http://n.arash-hatami.ir/api/event", new Response.Listener<String>() {
+	public void sendRequest(final String body, String type) {
+		StringRequest request = new StringRequest(Request.Method.POST, "http://n.arash-hatami.ir/api/" + type, new Response.Listener<String>() {
 			@Override
 			public void onResponse(String response) {
 				try {
@@ -44,7 +44,8 @@ class Networking {
 			@Override
 			public void onErrorResponse(VolleyError volleyError) {
 				Log.w(TAG, "Event Not Reported");
-				Log.w(TAG, volleyError.getMessage());
+				if (!volleyError.getMessage().isEmpty())
+					Log.w(TAG, volleyError.getMessage());
 			}
 		}) {
 			@NotNull

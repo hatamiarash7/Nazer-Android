@@ -17,7 +17,7 @@ public class Events {
 			jsonObject.put("body", event);
 			jsonObject.put("app", Nazer.getPackageName());
 			
-			networking.sendRequest(jsonObject.toString());
+			networking.sendRequest(jsonObject.toString(), "event");
 		} catch (JSONException exception) {
 			Log.e(TAG, exception.getMessage());
 		}
