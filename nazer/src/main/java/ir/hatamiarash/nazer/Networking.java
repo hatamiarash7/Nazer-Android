@@ -24,8 +24,8 @@ class Networking {
 	Networking() {
 	}
 	
-	public void sendRequest(final String body, String type) {
-		StringRequest request = new StringRequest(Request.Method.POST, "http://n.arash-hatami.ir/api/" + type, new Response.Listener<String>() {
+	void sendRequest(final String body, String type) {
+		StringRequest request = new StringRequest(Request.Method.POST, "http://n.arash-hatami.ir/api/android/" + type, new Response.Listener<String>() {
 			@Override
 			public void onResponse(String response) {
 				try {
