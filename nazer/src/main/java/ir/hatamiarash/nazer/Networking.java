@@ -44,7 +44,7 @@ class Networking {
 			@Override
 			public void onErrorResponse(VolleyError volleyError) {
 				Log.w(TAG, "Event Not Reported");
-				if (volleyError != null)
+				if (volleyError != null && volleyError.getMessage() != null)
 					if (!volleyError.getMessage().isEmpty())
 						Log.w(TAG, volleyError.getMessage());
 			}
